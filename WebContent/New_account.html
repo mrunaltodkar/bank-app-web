@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>New Account</title>
+</head>
+<body background="bank_card.jpg">
+
+
+	<form action="New_account.do" method="post">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="jumbotron text-center">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">index</a></li>
+						<li><a href="withdraw.html">withdraw</a></li>
+						<li><a href="deposit.html">deposit</a></li>
+						<li><a href="fund_transfer.html">fund_transfer</a></li>
+						<li><a href="search_account.html">search_account</a></li>
+						<li><a href="Check_balance.html">Check_balance</a></li>
+						<li><a href="Account_details.html">Account_details</a></li>
+						<li><a href="delete_account.html">delete_account</a></li>
+						<li><a href="updateBankAccount.html">Update_bank_account</a></li>
+
+					</ul>
+				</div>
+		</nav>
+
+		<div class="container" align="center">
+			<h1>Create New Account</h1>
+			<p>Please fill in this form to create an account.</p>
+			<br> <label for="Customer_name"><b>Account
+					HolderName</b></label> <input type="text"
+				placeholder="Enter Account Holder Name" name="customer_name"
+				required> </br> <br> <label for="Customer_account"><b>CustomerAccount</b></label>
+		
+				<select name="account_type">
+					<option value="savings">Savings</option>
+					<option value="current">Current</option>
+				</select>
+			
+			<br>
+			<br> <label for="Customer_balance"><b>Account
+					Balance</b></label> <input type="text" placeholder="Enter Account Balance"
+				name="account_balance" required> </br> <br> <br> <br>
+			<input type="submit" value="Create New BankAccount">
+	
+
+	</form>
+
+
+</body>
+</html>

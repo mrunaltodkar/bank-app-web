@@ -1,3 +1,6 @@
+<%@ page isELIgnored="false" %>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,7 @@
     <title>Account Details</title>
 </head>
 <body background="bank_card.jpg">
-        <form action="action_page.php">
+        <form action="getAccountdetails.do" method="post">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     
@@ -53,24 +56,15 @@
                               </tr>
                             </thead>
                             <tbody>
+                            <c:forEach var="account" items="${accounts}">
                               <tr>
-                                <th scope="row">102451</th>
-                                <td>Mark Mathew</td>
-                                <td>Savings</td>
-                                <td>2564000</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">201512</th>
-                                <td>Jacob Hank</td>
-                                <td>Current</td>
-                                <td>25420650</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">305210</th>
-                                <td>Larry Page</td>
-                                <td>Savings</td>
-                                <td>6020002102100</td>
-                              </tr>
+                                <td>${account.accountId}</td>
+                                <td>${account.accountHolderName}</td>
+                                <td>${account.accountType}</td>
+                                <td>${account.accountBalance}</td>
+                              </tr>                     
+                            </c:forEach>
+                              
                             </tbody>
                           </table>
                           
